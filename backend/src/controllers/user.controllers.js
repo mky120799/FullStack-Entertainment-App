@@ -8,7 +8,7 @@ const userRegister = async (req, res) => {
 
     const { name, email, password } = req.body;  // destructuring 
     let user = await User.findOne({ email });  // from mongoDB
-
+    console.log("already present user email",user);
     if (user) return res.status(404).json({
         success: false,
         message: "user already exist",

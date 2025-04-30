@@ -5,6 +5,8 @@ import Media from '../MediaComponents/Media'
 function FallbackMedia() {
 
     const mediaData = fallbackData.data;
+    console.log("Fallback Media Data:", mediaData);
+    // CSS styles
     const wrapperStyle = "mt-10 grid gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
 
     return (

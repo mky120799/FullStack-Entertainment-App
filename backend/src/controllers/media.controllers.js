@@ -75,7 +75,7 @@ const tvMediaController = async (req, res) => {
         // fetching data from tvMediaUrl
         // check the url as the url already contain page=1
         const data = await fetchData(tvMediaUrl + page + `&api_key=${process.env.TMDB_KEY}`);
-
+        // console.log("data in tvMediaController = ", data);
         // responding with customize data 
         res.status(200).json({
             success: true,
