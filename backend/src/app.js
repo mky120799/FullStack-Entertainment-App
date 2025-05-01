@@ -1,5 +1,6 @@
 // importing installed packages 
 const express = require('express');
+dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 const cors = require('cors')
 
@@ -11,7 +12,8 @@ const { userRouter } = require('./routes/user.routes.js')
 // app instances 
 const app = express();
 
-config.env = require('dotenv');
+
+dotenv.config();
 
 // Middleware 
 app.use(express.json());
