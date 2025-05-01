@@ -1,6 +1,6 @@
 // importing installed packages 
 const express = require('express');
-dotenv = require('dotenv');
+const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 const cors = require('cors')
 
