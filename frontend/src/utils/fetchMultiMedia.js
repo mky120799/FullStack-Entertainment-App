@@ -16,4 +16,3 @@ const fetchMultiMedia = async (page, mediaType) => {
 
 
 export default fetchMultiMedia;
-

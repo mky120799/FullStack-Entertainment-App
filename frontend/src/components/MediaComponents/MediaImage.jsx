@@ -12,6 +12,7 @@ function MediaImage({ singleMediaData, mediaType }) {
         const fetchImage = async () => {
             try {
                 const { data } = await axios.get(`${baseUrl}/media/${mediaType}/image/${singleMediaData.id}`);
+                console.log("this image data",data);
                 if (isMounted) {
                     setMediaImage(data.imagePath);
                 }

@@ -5,13 +5,10 @@ import Media from '../MediaComponents/Media';
 import fetchMultiMedia from '../../utils/fetchMultiMedia';
 
 function MediaTrending() {
-    const {
-        data: mediaData,
-        isLoading,
-        isError,
-        error,
-    } = useQuery([1, 'trending'], () => fetchMultiMedia(1, "trending"));
-
+    const dataForTrending = useQuery([1, 'trending'], () => fetchMultiMedia(1, "trending"));
+    console.log("Data for trending:", dataForTrending);
+    const { data: mediaData, isLoading, isError, error } = dataForTrending;
+    console.log("Media data:", mediaData);
     // Debugging: Log states
     console.log("isLoading:", isLoading);
     console.log("isError:", isError);
