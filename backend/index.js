@@ -2,7 +2,6 @@
 const dotenv = require('dotenv');
 const mongoose = require('mongoose')
 const { app } = require('./src/app.js')
-const serverless = require('serverless-http');
 
 // env configuration 
 dotenv.config();
@@ -14,5 +13,6 @@ mongoose.connect(process.env.MONGODB_URL,
 ).catch((error) => { console.error(error) })
 
 // server listening
-module.exports = app
-module.exports.handler = serverless(app);
+app.listen(8000, () => {
+    console.log("Server running on url: http://localhost:" + 8000);
+})
