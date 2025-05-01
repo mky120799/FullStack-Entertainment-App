@@ -1,3 +1,3 @@
-const baseUrl ="http://localhost:8000/api"
+const baseUrl ="backend-part-entertainment-app.vercel.app"
 
 export default baseUrl;
