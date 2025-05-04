@@ -29,7 +29,7 @@ const Header = () => {
             {/* Movie icon */}
             {/* <MdMovie className="p-1 text-cyan-500 text-3xl md:text-4xl ring-1 ring-cyan-500 rounded-full" /> */}
 
-            <NavbarMenu />
+            {/* <NavbarMenu /> */}
 
 
 

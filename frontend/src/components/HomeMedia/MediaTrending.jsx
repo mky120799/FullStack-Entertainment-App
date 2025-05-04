@@ -11,7 +11,7 @@ function MediaTrending() {
         queryFn: () => fetchMultiMedia(1, "trending")
     });
     console.log("Data for trending:", dataForTrending);
-    const { data: mediaData, isLoading, isError, error } = dataForTrending;
+    const { data: mediaData, isLoading, isError } = dataForTrending;
     console.log("Media data:", mediaData);
     // Debugging: Log states
     console.log("isLoading:", isLoading);

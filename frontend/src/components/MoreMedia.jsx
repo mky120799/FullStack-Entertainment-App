@@ -5,12 +5,22 @@ import { useQuery } from '@tanstack/react-query';
 import Media from "./MediaComponents/Media";
 import fetchMultiMedia from "../utils/fetchMultiMedia";
 import FallbackMedia from "./FallbackComponents/FallbackMedia";
+import Loading from "./CssComponents/Loading";
 
 
 function MoreMedia({ currentPage, mediaType }) {
-    const { isLoading, isError, data: mediaData } = useQuery({ queryKey: [currentPage, mediaType], queryFn: fetchMultiMedia });
+    const dataForTrending = useQuery({
+        queryKey: [currentPage, mediaType],
+        queryFn: () => fetchMultiMedia(currentPage, mediaType)
+    });
+    console.log("Data for moreMedia", dataForTrending);
+    const { data: mediaData, isLoading, isError } = dataForTrending;
     
- {/* fetching media 
+    console.log("More Media data:", mediaData);
+    console.log("isloading data", isLoading);
+    console.log("isError of moreMedia",isError);
+    
+    {/* fetching media 
     const {
         data: mediaData,
         isLoading,
@@ -18,8 +28,8 @@ function MoreMedia({ currentPage, mediaType }) {
     } = useQuery([currentPage, mediaType], () => fetchMultiMedia(currentPage, mediaType));
 
     render loading or error */}
-
-    if (isLoading) return <FallbackMedia />;
+    
+    if (isLoading) return <Loading />;
     if (isError) return <FallbackMedia />;
 
     // css style 

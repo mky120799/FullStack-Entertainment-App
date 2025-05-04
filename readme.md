@@ -4,8 +4,8 @@ The Entertainment App is a full-stack application designed to provide users with
 
 ## Deployment
 
-- **Frontend:** :- https://entertainment-app-anurag-affection.vercel.app/
-- **Backend:** :- https://entertainment-web-app-0aqb.onrender.com/
+- **Frontend:** :- https://frontend-part-entertainment-app.vercel.app/
+- **Backend:** :- https://backened-part-entertainment-app.vercel.app/
 
 ## Important Links
 
