@@ -1,6 +1,6 @@
 // importing from installed packages 
 import React from "react";
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 
 import Media from "./MediaComponents/Media";
 import fetchMultiMedia from "../utils/fetchMultiMedia";
@@ -8,15 +8,17 @@ import FallbackMedia from "./FallbackComponents/FallbackMedia";
 
 
 function MoreMedia({ currentPage, mediaType }) {
-
-    // fetching media 
+    const { isLoading, isError, data: mediaData } = useQuery({ queryKey: [currentPage, mediaType], queryFn: fetchMultiMedia });
+    
+ {/* fetching media 
     const {
         data: mediaData,
         isLoading,
         isError,
     } = useQuery([currentPage, mediaType], () => fetchMultiMedia(currentPage, mediaType));
 
-    // render loading or error 
+    render loading or error */}
+
     if (isLoading) return <FallbackMedia />;
     if (isError) return <FallbackMedia />;
 

@@ -1,11 +1,15 @@
 import React from 'react';
-import { useQuery } from 'react-query';
+import Loading from '../CssComponents/Loading';
+import { useQuery } from '@tanstack/react-query';
 import FallbackMedia from '../FallbackComponents/FallbackMedia';
 import Media from '../MediaComponents/Media';
 import fetchMultiMedia from '../../utils/fetchMultiMedia';
 
 function MediaTrending() {
-    const dataForTrending = useQuery([1, 'trending'], () => fetchMultiMedia(1, "trending"));
+    const dataForTrending = useQuery({
+        queryKey: [1, 'trending'],
+        queryFn: () => fetchMultiMedia(1, "trending")
+    });
     console.log("Data for trending:", dataForTrending);
     const { data: mediaData, isLoading, isError, error } = dataForTrending;
     console.log("Media data:", mediaData);
@@ -15,7 +19,7 @@ function MediaTrending() {
     console.log("mediaData:", mediaData);
 
     // Render loading state
-    if (isLoading) return <FallbackMedia />;
+    if (isLoading) return <Loading/>
 
     // Render error state
     if (isError) {
