@@ -9,7 +9,7 @@ The Entertainment App is a full-stack application designed to provide users with
 
 ## Important Links
 
-- API Documentation : https://documenter.getpostman.com/view/30096390/2sA3JGeicf
+- API Documentation : https://documenter.getpostman.com/view/31817931/2sB2j69VrX
 - Video Explanation: https://youtu.be/r7oX1R0dADk
 - Database Design: [Google Docs Link](https://docs.google.com/document/d/1hbnF4K5TD7rX6tV_f1QHFxl1lUa7iwCuzthboU_MwQM/edit?usp=sharing)
 - Best Practices : [Google Docs Link](https://docs.google.com/document/d/1KuIXsouPjAgOUs59XOcKuDiKuu74_20GStGO6DTDx6g/edit?usp=sharing)
